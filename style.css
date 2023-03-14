@@ -85,12 +85,8 @@ input.search {
     font-size: 20px;
 }
 .fa-moon{
-    color: rgb(255, 255, 255);
-    /* color: white; */
     font-size: 20px;
-    /* display: none;
-    */
-    visibility: hidden;
+    color: black;
 }
 i{
     cursor: pointer;
@@ -209,16 +205,6 @@ span{
 li{
     color: white;
 }
-.act{
-    visibility: visible;
-    color: black;
-}
-.actives{
-    visibility: hidden;
-}
-/* .listrecent{
-    display: none;
-} */
 .recent{
     opacity: 0;
 }

@@ -72,12 +72,12 @@ const volume = document.querySelector(".volume")
 const display = document.querySelector(".display")
 const img = document.querySelector(".images")
 const sun = document.querySelector(".fa-sun")
-const moon = document.querySelector(".fa-moon")
+
 const body = document.querySelector("body")
 const header = document.querySelector(".header")
 const plays = document.querySelector(".plays")
 const last = document.querySelector(".last")
-console.log(last);
+// console.log(last);
 const recentes = document.querySelector(".recent")
 // console.log(recentes);
 const h3 = document.querySelector("h3")
@@ -89,9 +89,8 @@ const search = document.querySelector(".search")
 
 
 
-last.addEventListener("click",()=>{
+last.addEventListener("click", () => {
     recentes.classList.toggle("add")
-
 })
 
 
@@ -139,15 +138,10 @@ for (let i = 0; i < music.length; i++) {
                             timeOut()
                         }
                     })
-                 
                 }
             }
         })
-
     })
-
-
-
 }
 
 
@@ -161,8 +155,7 @@ const li = document.querySelectorAll("li")
 
 sun.addEventListener("click", () => {
     if (sun.classList.contains("fa-sun")) {
-        sun.classList.add("actives")
-        moon.classList.add("act")
+        sun.className = "fa-solid fa-moon"
         body.style.backgroundColor = "white"
         header.style.backgroundColor = "white"
         plays.style.color = "black"
@@ -171,26 +164,24 @@ sun.addEventListener("click", () => {
         h3.style.color = "black"
         const lis = document.querySelectorAll("li")
         for (let h = 0; h < lis.length; h++) {
-           lis[h].style.color = "white"
+            lis[h].style.color = "black"
         }
-    
-        moon.addEventListener("click",()=>{
-            if (moon.classList.contains("fa-moon")){
-                sun.classList.remove("actives")
-                moon.classList.remove("act")
-            }
-            body.style.backgroundColor = "black"
-            header.style.backgroundColor = "black"
-            h3.style.color = "white"
-            plays.style.color = "white"
-            last.style.color = "white"
+    }
+    else {
+        sun.className = "fa-solid fa-sun"
 
-                const lis = document.querySelectorAll("li")
-                for (let h = 0; h < lis.length; h++) {
-                   lis[h].style.color = "black"
-                }
+        body.style.backgroundColor = "black"
+        header.style.backgroundColor = "black"
+        h3.style.color = "white"
+        plays.style.color = "white"
+        last.style.color = "white"
 
-        })
+        const lis = document.querySelectorAll("li")
+        for (let h = 0; h < lis.length; h++) {
+            lis[h].style.color = "white"
+        }
+
+
     }
 
 
@@ -263,8 +254,8 @@ function autoplay(e) {
     let arrs = []
 
     arrs.push(display.innerText)
-  
- 
+
+
     play.className = "fa-solid fa-pause"
 
     audio.play()
