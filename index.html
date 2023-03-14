@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/407c3a8462.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div class="header">
+        <i class="fa-solid fa-music"></i>
+        <h3><span class="head2">Love </span>Music</h3>
+        <input type="search" class="search" placeholder=" Search Your Songs">
+        <h4 class="plays">Playlist</h4>
+        <h4 class="last">Recently Played</h4>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+    </div>
+<div class="container"> 
+    <div class="list">
+        <p class="lists">List of Songs</p>   
+    </div>  
+    <div class="card">
+        <h1>Your Songs</h1>
+        <marquee>
+            <p class="display"></p>
+        </marquee>
+        <img src="" alt="" class="images">
+        <audio src=""></audio>
+        <span class="start">00:00</span>
+        <input type="range" value = "0" min="0" max="" id="progress" value="0">
+        <span class="finish">00:00</span>
+        <div class="play">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-solid fa-play"></i>   
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-volume-up"></i>        
+        </div>
+        <input type="range" class="volume hide" value="100">
+    </div>
+    <div class="recent">
+        <ul></ul>
+    </div>
+ 
+</div>
+ 
+
+
+
+    <script src="music.js"></script>
+</body>
+</html>
